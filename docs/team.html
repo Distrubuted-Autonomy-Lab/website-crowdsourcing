@@ -2,17 +2,140 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Team</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #0ea5e9;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+    header {
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 32px;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin: 0;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      background: rgba(148, 163, 184, 0.2);
+      display: block;
+    }
+    .name {
+      margin: 12px 0 6px;
+      font-size: 18px;
+    }
+    .role {
+      color: var(--accent);
+      font-size: 14px;
+      margin: 0 0 8px;
+    }
+    .bio {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .footer-link {
+      margin-top: 28px;
+    }
+    .footer-link a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Team</h1>
-  <ul>
-    <li><strong>Jarl Evanson</strong></li>
-    <li><strong>Carlos Marquez</strong></li>
-    <li><strong>Sheala Miller</strong></li>
-    <li><strong>Jaylon Sanders</strong></li>
-    <li><strong>Cole Segura</strong></li>
-  </ul>
-  <p><a href="index.html">Back to Home</a></p>
+  <div class="page">
+    <header>
+      <h1>Team</h1>
+      <p class="subtitle">Crowdsourcing Senior Info capstone team</p>
+    </header>
+
+    <section class="team-grid">
+      <article class="card">
+        <img src="images/jarl-evanson.jpg" alt="Jarl Evanson" />
+        <h2 class="name">Jarl Evanson</h2>
+        <p class="role">Role title</p>
+        <p class="bio">Short bio goes here. Add interests, strengths, or project focus.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/carlos-marquez.jpg" alt="Carlos Marquez" />
+        <h2 class="name">Carlos Marquez</h2>
+        <p class="role">Role title</p>
+        <p class="bio">Short bio goes here. Add interests, strengths, or project focus.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/sheala-miller.jpg" alt="Sheala Miller" />
+        <h2 class="name">Sheala Miller</h2>
+        <p class="role">Role title</p>
+        <p class="bio">Short bio goes here. Add interests, strengths, or project focus.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/jaylon-sanders.jpg" alt="Jaylon Sanders" />
+        <h2 class="name">Jaylon Sanders</h2>
+        <p class="role">Role title</p>
+        <p class="bio">Short bio goes here. Add interests, strengths, or project focus.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/cole-segura.jpg" alt="Cole Segura" />
+        <h2 class="name">Cole Segura</h2>
+        <p class="role">Role title</p>
+        <p class="bio">Short bio goes here. Add interests, strengths, or project focus.</p>
+      </article>
+    </section>
+
+    <div class="footer-link">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </div>
 </body>
 </html>
