@@ -2,14 +2,78 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Deliverables</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #0ea5e9;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 70px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+    }
+    .subtitle {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .card a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .footer-link {
+      margin-top: 24px;
+    }
+    .footer-link a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Project Deliverables</h1>
-  <ul>
-    <li><a href="https://drive.google.com/file/d/100pQ6e5aIblLDGGjIU67OHELe7lxGKhB/view?usp=sharing">Preliminary Presentation</a></li>
-  </ul>
-  <p>Future sprint slides and documents will be added here.</p>
-  <p><a href="index.html">Back to Home</a></p>
+  <div class="page">
+    <h1>Project Deliverables</h1>
+    <p class="subtitle">This page collects presentations and sprint documents.</p>
+
+    <div class="card">
+      <p><a href="https://drive.google.com/file/d/100pQ6e5aIblLDGGjIU67OHELe7lxGKhB/view?usp=sharing">Preliminary Presentation</a></p>
+      <p>Additional sprint deliverables will be added here.</p>
+    </div>
+
+    <div class="footer-link">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </div>
 </body>
 </html>
