@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sprint 1 — Crowdsourcing Senior Info</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #0ea5e9;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 20px 70px;
+      text-align: left;
+    }
+    h1, h2, h3 {
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 18px; }
+    h1 span, h2 span {
+      position: relative;
+      display: inline-block;
+    }
+    h1 span::after, h2 span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 999px;
+    }
+    p, li {
+      line-height: 1.6;
+      color: var(--text);
+    }
+    .subtitle { color: var(--muted); margin-bottom: 24px; }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th { background: rgba(56, 189, 248, 0.15); }
+    ul { padding-left: 20px; }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--card);
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 24px;
+    }
+    .btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1><span>Sprint 1 — Crowdsourcing Senior Info</span></h1>
+    <p class="subtitle">January 20, 2026 — February 24, 2026 · Sheala Miller, Jarl Evanson, Carlos Marquez, Jaylon Sanders, Cole Segura</p>
+
+    <!-- Project Planning Document -->
+    <section class="card">
+      <h2>Project Planning Document</h2>
+      <h3>Project Mission</h3>
+      <p>CareBot is committed to providing an AI-powered platform that helps caregivers, social workers, and families quickly find reliable local resources before they reach a crisis. We crowdsource resource recommendations, moderate submissions, and maintain a high-quality database of Alabama healthcare and social services.</p>
+      <h3>Problems We Are Solving</h3>
+      <ul>
+        <li><strong>Resource discovery:</strong> Caregivers and families struggle to find local healthcare resources when they need them.</li>
+        <li><strong>Data quality:</strong> Community-submitted resources need validation, deduplication, and structured merge.</li>
+        <li><strong>Rural access:</strong> Gaps exist in counties with limited or scattered services.</li>
+        <li><strong>Trust & moderation:</strong> Submissions must be reviewed and integrated in a controlled, auditable way.</li>
+      </ul>
+      <h3>Sprint 1 Goals</h3>
+      <p>Sprint 1 focused on rebuilding the resource submission and moderation system. A significant portion of the sprint was spent researching and familiarizing with Docker, which the team used for local development and deployment. We prioritized fixing the public submission form, implementing merge functionality with field-level deduplication, improving Docker portability across Mac and Windows, and applying initial security hardening. The team also produced documentation and setup guides to support onboarding.</p>
+      <h3>Sprint 1 Scope</h3>
+      <table>
+        <tr><th>Priority</th><th>Goal</th><th>Status</th></tr>
+        <tr><td>P0</td><td>Fix resource submission flow</td><td>Done</td></tr>
+        <tr><td>P0</td><td>Implement merge functionality (approve, merge, reject)</td><td>Done</td></tr>
+        <tr><td>P1</td><td>Improve Docker environment (Mac + Windows)</td><td>Done</td></tr>
+        <tr><td>P1</td><td>Initial security improvements</td><td>Done</td></tr>
+        <tr><td>P2</td><td>Documentation & onboarding</td><td>Done</td></tr>
+      </table>
+    </section>
+
+    <!-- Project Backlog Snapshot -->
+    <section class="card">
+      <h2>Project Backlog Snapshot</h2>
+      <h3>Functional Items</h3>
+      <table>
+        <tr><th>ID</th><th>Item</th><th>Priority</th></tr>
+        <tr><td>B1</td><td>Resource submission form + moderation queue</td><td>P0</td></tr>
+        <tr><td>B2</td><td>Approve, merge, and reject actions</td><td>P0</td></tr>
+        <tr><td>B3</td><td>Smart merge with deduplication</td><td>P0</td></tr>
+        <tr><td>B4</td><td>Similarity search for matching</td><td>P0</td></tr>
+        <tr><td>B5</td><td>Fuzzy matching improvements</td><td>P2</td></tr>
+        <tr><td>B6</td><td>Bulk moderation (multi-select)</td><td>P2</td></tr>
+      </table>
+      <h3>Non-Functional Items</h3>
+      <table>
+        <tr><th>ID</th><th>Item</th><th>Priority</th></tr>
+        <tr><td>B8</td><td>Docker compatibility (Mac + Windows)</td><td>P1</td></tr>
+        <tr><td>B9</td><td>Security configuration improvements</td><td>P1</td></tr>
+        <tr><td>B10</td><td>Comprehensive end-to-end testing</td><td>P1</td></tr>
+        <tr><td>B11</td><td>Unit tests for submission & merge</td><td>P1</td></tr>
+        <tr><td>B12</td><td>Non-root Docker + HTTPS</td><td>P1</td></tr>
+        <tr><td>B13</td><td>Setup guides and documentation</td><td>P2</td></tr>
+      </table>
+      <h3>Carried to Sprint 2/3</h3>
+      <ul>
+        <li>Comprehensive end-to-end testing</li>
+        <li>Security headers for production</li>
+        <li>Unit tests for submission and merge flows</li>
+        <li>Bulk moderation (approve/reject multiple)</li>
+      </ul>
+    </section>
+
+    <!-- Sprint Backlog -->
+    <section class="card">
+      <h2>Sprint Backlog</h2>
+      <p><strong>Sprint Goal:</strong> Rebuild the resource submission and moderation system so community submissions flow into a moderation queue and moderators can approve, merge, or reject with proper deduplication.</p>
+      <table>
+        <tr><th>ID</th><th>Item</th><th>Priority</th><th>Status</th></tr>
+        <tr><td>S1.1</td><td>Fix public submission form</td><td>P0</td><td>Done</td></tr>
+        <tr><td>S1.2</td><td>Compute similarity candidates</td><td>P0</td><td>Done</td></tr>
+        <tr><td>S1.3</td><td>Moderation queue listing</td><td>P0</td><td>Done</td></tr>
+        <tr><td>S1.4</td><td>Approve as new resource</td><td>P0</td><td>Done</td></tr>
+        <tr><td>S1.5</td><td>Merge into existing (field-level)</td><td>P0</td><td>Done</td></tr>
+        <tr><td>S1.6</td><td>Reject submission</td><td>P0</td><td>Done</td></tr>
+        <tr><td>S1.7</td><td>Docker compatibility on Mac</td><td>P1</td><td>Done</td></tr>
+        <tr><td>S1.8</td><td>Docker compatibility on Windows</td><td>P1</td><td>Done</td></tr>
+        <tr><td>S1.9</td><td>Rate limiting on public endpoints</td><td>P1</td><td>Done</td></tr>
+        <tr><td>S1.10</td><td>COOP policy + security headers</td><td>P1</td><td>Done</td></tr>
+        <tr><td>S1.11</td><td>Sanitize SQL error messages</td><td>P1</td><td>Done</td></tr>
+        <tr><td>S1.12</td><td>Fix submission flow bug</td><td>P1</td><td>Done</td></tr>
+        <tr><td>S1.13</td><td>CHANGES.md and BUILD_AND_TEST.md</td><td>P2</td><td>Done</td></tr>
+        <tr><td>S1.14</td><td>Project website updates</td><td>P2</td><td>Done</td></tr>
+      </table>
+    </section>
+
+    <!-- Sprint Retrospective -->
+    <section class="card">
+      <h2>Sprint 1 Retrospective</h2>
+      <h3>What Went Well</h3>
+      <ul>
+        <li>Research and familiarization with Docker paid off — environment eventually built and ran across Mac and Windows</li>
+        <li>Regular scrum meetings kept the team aligned</li>
+        <li>Agreed on a single fork as a group</li>
+        <li>Merge flow with approve, merge, reject and audit logging completed</li>
+        <li>Documentation (CHANGES.md, BUILD_AND_TEST.md) supported onboarding</li>
+        <li>Security hardening completed as planned</li>
+      </ul>
+      <h3>What Didn't Go Well</h3>
+      <ul>
+        <li>Initial Docker build failures, credential errors, missing .env — research and learning curve took significant sprint time</li>
+        <li>Some team members lacked write access to GitHub early on</li>
+        <li>Challenges understanding the inherited submission code</li>
+        <li>Limited familiarity with Django, PostGIS, pgvector</li>
+      </ul>
+      <h3>Challenges</h3>
+      <table>
+        <tr><th>Challenge</th><th>Impact</th></tr>
+        <tr><td>Docker build failures</td><td>Delayed local development</td></tr>
+        <tr><td>Write access to GitHub</td><td>Blocked some contributions</td></tr>
+        <tr><td>Understanding inherited codebase</td><td>Slower ramp-up</td></tr>
+        <tr><td>Mac vs Windows Docker behavior</td><td>Required platform-specific fixes</td></tr>
+        <tr><td>DB schema mismatch</td><td>Required workarounds in merge flow</td></tr>
+      </table>
+    </section>
+
+    <a class="btn" href="deliverables.html">Back to Deliverables</a>
+  </div>
+</body>
+</html>
