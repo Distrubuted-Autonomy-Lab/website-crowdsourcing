@@ -28,7 +28,6 @@ High-level work items for the CareBot crowdsourcing platform.
 | B9 | Security configuration improvements | P1 |
 | B10 | Comprehensive end-to-end testing | P1 |
 | B11 | Unit tests for submission & merge flows | P1 |
-| B12 | Non-root Docker + HTTPS enforcement | P1 |
 | B13 | Setup guides and documentation | P2 |
 
 ---
