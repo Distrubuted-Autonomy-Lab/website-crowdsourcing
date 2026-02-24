@@ -29,6 +29,7 @@ Rebuild the resource submission and moderation system so community submissions f
 | S1.12 | Fix "too many values to unpack" in submission flow | P1 | Done |
 | S1.13 | CHANGES.md and BUILD_AND_TEST.md | P2 | Done |
 | S1.14 | Project website updates | P2 | Done |
+| S1.18 | Non-root Docker + HTTPS | P1 | Done |
 
 ---
 

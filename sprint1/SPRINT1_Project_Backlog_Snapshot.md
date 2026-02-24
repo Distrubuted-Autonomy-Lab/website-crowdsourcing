@@ -42,6 +42,7 @@ High-level work items for the CareBot crowdsourcing platform.
 - B4 — Similarity search integration  
 - B8 — Docker compatibility (Mac + Windows)  
 - B9 — Initial security improvements (rate limiting, COOP, headers, error sanitization)  
+- B12 — Non-root Docker + HTTPS enforcement  
 - B13 — Setup guides and documentation  
 - B14 — Non-root Docker  
 
