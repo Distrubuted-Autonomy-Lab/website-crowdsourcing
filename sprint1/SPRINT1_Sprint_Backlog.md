@@ -39,4 +39,4 @@ Rebuild the resource submission and moderation system so community submissions f
 | S1.15 | Comprehensive end-to-end testing | Scope / time |
 | S1.16 | Unit tests for submission & merge | Scope / time |
 | S1.17 | Bulk moderation (multi-select) | Deferred |
-| S1.18 | Non-root Docker + HTTPS | Deferred |
+| S1.18 | HTTPS Enforcement | Deferred |
